@@ -6,7 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>投稿一覧</h1>
     <table>
         <tr>
             <th>ID</th>
@@ -20,7 +19,7 @@
             <td>{{ $post->id }}</td>
             <td>{{ $post->title }}</td>
             <td>{{ $post->content }}</td>
-            <td>{{ $post->created_at }}</td>
+            <td>{{ $post>created_at }}</td>
             <td>{{ $post->updated_at }}</td>
         </tr>
         @endforeach
