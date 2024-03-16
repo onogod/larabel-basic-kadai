@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\VendorController;
 use App\Http\Controllers\PostController;
 
 /*
@@ -21,3 +23,9 @@ Route::get('/', function () {
 Route::get('/posts', [PostController::class, 'index']);
 
 Route::get('/products',[PostController::class, 'index']);
+
+Route::get('/products/{id}',[ProductController::class, 'show']);
+
+Route::get('/vendors/{id}', [VendorController::class, 'show']);
+
+Route::get('/posts/{id}', [PostController::class, 'show']);
