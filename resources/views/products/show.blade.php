@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <table>
         <tr>
             <th>ID</th>
-            <td>{{$product->id }}</td>
+            <td>{{ $product->id }}</td>
         </tr>
         <tr>
             <th>商品名</th>
@@ -20,12 +20,13 @@
             <td>{{ $product->price }}</td>
         </tr>
         <tr>
-             <th>作成日時</th>
-             <td>{{ $product->created_at }}</td>            
-         </tr>
-         <tr>
-             <th>更新日時</th>
-             <td>{{ $product->updated_at }}</td>
+            <th>作成日時</th>
+            <td>{{ $product->created_at }}</td>            
+        </tr>
+        <tr>
+            <th>更新日時</th>
+            <td>{{ $product->updated_at }}</td> 
+        </tr>
     </table>
 </body>
 </html>
