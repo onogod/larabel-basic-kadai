@@ -23,7 +23,7 @@ public function store(Request $request) {
     $posts->save();
 
     
-    return redirect('/posts/index');
+    return redirect('/posts');
 }
     public function index() {
         $posts = DB::table('posts')->get();
@@ -34,7 +34,7 @@ public function store(Request $request) {
     public function show($id) {
         $post = Post::find($id);
 
-        return view('posts.show', compact('posts'));
+        return view('/posts');
     }
     
 }
