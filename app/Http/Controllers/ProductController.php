@@ -28,7 +28,7 @@ class ProductController extends Controller {
     public function create() {
         $vendor_codes = Vendor::pluck('vendor_code');
 
-       return view('products.create', compact('vendor_codes'));
+        return view('products.create', compact('vendor_codes'));
     }
 
     public function store(ProductStoreRequest $request) {
