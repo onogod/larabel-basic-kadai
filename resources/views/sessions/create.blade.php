@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
         </div>
         @endif
 
-        <form action="{{ route('sessions.store') }}" method="POST"></form>
+        <form action="{{ route('sessions.store') }}" method="POST">
         @csrf
         <select name="product_id">
             <option disabled selected value="">選択してください</option>
@@ -27,6 +27,6 @@
             @endforeach    
         </select>
             <input type="submit" value="カートに入れる">
-        </form>
+            </form>
         </body>
 </html>

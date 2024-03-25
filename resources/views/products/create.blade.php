@@ -18,11 +18,11 @@
     </div>
     @endif
 
-    <form action="{{ route('products.store')}}" method="POST">
+    <form action="{{ route('products.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <table>
             <tr>
-                <th></th>
+                <th>商品名</th>
                 <td>
                     <input type="text" name="product_name">
                 </td>
@@ -44,7 +44,12 @@
                         </select>
                     </td>
                 </tr>
-        
+            <tr>
+                <th>画像</th>
+                <td>
+                    <input type="file" name="image">
+                </td>
+            </tr>
         </table>
         <input type="submit" value="登録">
     </form>
