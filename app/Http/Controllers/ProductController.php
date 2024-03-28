@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Product;
 use App\Models\Vendor;
 use App\Http\Requests\ProductStoreRequest;
+use App\Events\ProductAddedEvent;
 
 class ProductController extends Controller {
     public function index() {
@@ -46,6 +47,8 @@ class ProductController extends Controller {
             $product->image_name = basename($image_path);     }
         
         $product->save();
+
+        event(new ProductAddedEvent($product));
 
         // リダイレクトさせる
         return redirect("/products/{$product->id}");

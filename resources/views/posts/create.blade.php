@@ -33,8 +33,10 @@
                 <textarea type="text" name="content" max="200"></textarea>
             </td>
         </tr>
-        </form>
+      
     </table>
+    
     <input type="submit" value="登録">
+    </form>
 </body>
 </html>

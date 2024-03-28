@@ -2,7 +2,14 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\HelloController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\VendorController;
+use App\Http\Controllers\RequestController;
+use App\Http\Controllers\ResponseController;
+use App\Http\Controllers\CookieController;
+use App\Http\Controllers\SessionController;
+//use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,10 +78,4 @@ Route::post('/sessions/store', [SessionController::class, 'store'])->name('sessi
 
 Route::delete('/sessions/destroy', [SessionController::class, 'destroy'])->name('sessions.destroy');
 
-Route::get('/posts', [PostController::class, 'index']);
 
-Route::get('/posts/create', [PostController::class, 'create'])->middleware('auth');
-
-Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store')->middleware('auth');
-
-Route::get('/posts/{id}', [PostController::class, 'show']);
